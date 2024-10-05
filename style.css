@@ -1,0 +1,141 @@
+:root {
+    --main-color:rgb(71, 252, 210);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    background-color: rgb(55, 55, 55);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.header {
+    color: var(--main-color);
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    padding:30px;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    border: 3px solid var(--main-color);
+    border-radius:10px;
+    margin-top:-30px;
+    padding: 10px;
+    color: var(--main-color);
+    
+}
+h3 {
+    font-size: 15px;
+}
+h4 {
+    color: var(--main-color);
+}
+footer {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: 3px dashed white;
+    display:flex;
+    flex: 0 0 calc(33.33%-100px);
+    position:relative; 
+    flex-direction:column;
+    align-items:stretch;
+    padding: 10px;
+    margin-bottom: 25px;
+    glassmorphism: 1;
+    transition: flex-basis 500ms linear;
+    
+    min-width: 0;
+    box-sizing:border-box;
+    word-wrap: break-word;
+}
+
+
+
+pre{
+    font-family: 'Courier New', Courier, monospace;
+    border: solid black;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    justify-content: center;
+    }
+.background {
+    background: linear-gradient(to right, var(--main-color), #dfbfa6 );
+
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:1rem;
+
+
+    
+}
+.code-card .card header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.code-card:hover, .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 5px var(--main-color), 0 0 15px var(--main-color);
+}
+@media screen and (max-width: 960px)  {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        }
+        .card {
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
+    
+}
+@media screen and (max-width: 680px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        min-width: 20rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        margin-bottom:20px;
+    }
+    
+}
+
+
+
+
+
+    
+    
+
+    
